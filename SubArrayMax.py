@@ -1,4 +1,4 @@
-#VERIFICA INTERSEÇÃO
+#VERIFICA INTERSECAO
 def SubArrayMaxInt(lista, ini, meio, fim):
   somaE = float('-inf')
   indiceE = -1
