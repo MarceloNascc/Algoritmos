@@ -1,14 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+//TROCA POSIÇÃO
 void swap(int* a, int* b){
-    int tem = *a;
+    int temp = *a;
     *a = *b;
-    *b = tem;
+    *b = temp;
 }
 
+//CONQUISTA
 int ParticionarRand(int lista[], int ini, int fim){
-    int pivo = rand() % fim;
+    int pivo = rand() % fim; //PIVO RANDÔMICO
     swap(&lista[pivo], &lista[fim-1]);
 
     int i, j;
@@ -19,11 +21,12 @@ int ParticionarRand(int lista[], int ini, int fim){
         }
     }
 
-    swap(&lista[i++], &lista[fim-1]);
+    swap(&lista[++i], &lista[fim-1]);
 
     return i;
 }
 
+//DIVISÃO
 void QuickSort(int lista[], int ini, int fim){
     if((fim - ini) <= 1){
         return;
@@ -31,7 +34,7 @@ void QuickSort(int lista[], int ini, int fim){
 
     int pivo = ParticionarRand(lista, ini, fim);
 
-    QuickSort(lista, ini, pivo - 1);
+    QuickSort(lista, ini, pivo);
     QuickSort(lista, pivo + 1, fim);
 }
 
@@ -56,4 +59,3 @@ int main (){
 
     return 0;
 }
-
