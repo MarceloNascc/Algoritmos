@@ -6,7 +6,7 @@ void Merge(int lista[], int ini, int meio, int fim){
     int tam = (meio - ini) + (fim - meio); //TAMANHO DAS DUAS SUBLISTAS JUNTAS
     int listAux[tam];
 
-//INTERCALAÇÃO NA ĆÓPIA
+    //INTERCALAÇÃO NA ĆÓPIA
     int i, j, k;
     for(i = ini, j = meio, k = 0; i < meio && j < fim; k++){
         if(lista[i] < lista[j]){
@@ -29,13 +29,13 @@ void Merge(int lista[], int ini, int meio, int fim){
             listAux[k] = lista[j];
         }
     }
-//INTERCALAÇÃO NA CÓPIA
+    //INTERCALAÇÃO NA CÓPIA
 
-//VETOR ORIGINAL
+    //VETOR ORIGINAL
     for(i = ini, k = 0; i < fim; i++, k++){
         lista[i] = listAux[k];
     }
-//VETOR ORIGINAL
+    //VETOR ORIGINAL
 }
 
 //ETAPA DA DIVISÃO
