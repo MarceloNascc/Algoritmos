@@ -10,7 +10,7 @@ void swap(int* a, int* b){
 
 //CONQUISTA
 int ParticionarRand(int lista[], int ini, int fim){
-    int pivo = ini + rand() % fim; //PIVO RANDÔMICO
+    int pivo = ini + rand() % (fim - ini); //PIVO RANDÔMICO
     swap(&lista[pivo], &lista[fim-1]);
 
     int i, j;
