@@ -1,19 +1,19 @@
 #VERIFICA INTERSECAO
 def SubArrayMaxInt(lista, ini, meio, fim):
+  #VERIFICA A MAIOR SOMA DA ESQUERDA A PARTIR DO MEIO
   somaE = float('-inf')
   indiceE = -1
   soma = 0
-  #VERIFICA A MAIOR SOMA DA ESQUERDA A PARTIR DO MEIO
   for i in range(meio, -1, -1):
     soma += lista[i]
     if soma > somaE:
       indiceE = i
       somaE = soma
 
+  #VERIFICA A MAIOR SOMA DA DIREITA A PARTIR DO MEIO
   somaD = float('-inf')
   indiceD = -1
   soma = 0
-  #VERIFICA A MAIOR SOMA DA DIREITA A PARTIR DO MEIO
   for i in range(meio+1, fim+1):
     soma += lista[i]
     if soma > somaD:
@@ -51,7 +51,7 @@ def main():
     lista.append(int(input()))
 
   maxArray = SubArrayMax(lista, 0, len(lista) - 1)
-
+  
   print(maxArray)
 
 if __name__ == "__main__":
