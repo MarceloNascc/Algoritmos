@@ -50,9 +50,9 @@ def main():
   for i in range(n):
     lista.append(int(input()))
 
-  res = SubArrayMax(lista, 0, len(lista) - 1)
+  maxArray = SubArrayMax(lista, 0, len(lista) - 1)
 
-  print(res)
+  print(maxArray)
 
 if __name__ == "__main__":
   main()
